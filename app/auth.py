@@ -3,8 +3,8 @@ from jose import jwt, JWTError
 from datetime import datetime, timedelta
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
-from app.models import User
-from app.database import get_db
+from models.user import User
+from database import get_db
 from sqlalchemy.future import select
 
 SECRET_KEY = "your-secret-key"
